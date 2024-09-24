@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Layout for App Name and Logo (Top-Left Corner) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp">
+
+            <!-- App Logo -->
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo"
+                android:layout_marginEnd="8dp" />
+
+            <!-- App Name -->
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unit Converter"
+                android:textSize="30sp"
+                android:textColor="#121212"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- CardView for Input -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/inputValue"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter value"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="#9CCAC0" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Spinner for Unit Selection (From Unit) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Unit:"
+            android:textSize="16sp"
+            android:textColor="#121212"
+            android:paddingTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#9CCAC0"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Spinner for Unit Selection (To Unit) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Unit:"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:paddingTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#9CCAC0"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Convert Button with Animation -->
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="Convert"
+            android:textSize="25sp"
+            android:textColor="#1E1F22"
+            android:backgroundTint="#9CCAC0"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:stateListAnimator="@animator/button_anim"
+            />
+
+        <!-- Output TextView for Result -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textSize="20sp"
+            android:textColor="#458166"
+            android:gravity="center"
+            android:paddingTop="24dp"
+            android:paddingBottom="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
